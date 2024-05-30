@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.pengeringanResult.resultPengeringanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextView.PoppinsNormal22sp020202"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:text="Hasil Pengeringan Tepung Mocaf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            style="@style/TextView.PoppinsNormal14sp8D92A3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="Hasil Perhitungan Kadar Air Tepung Mocaf"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/ivResult"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/calculator"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/tvBeratAwal"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berat Awal :"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/ivResult"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvBeratAwalVal"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:text="1100"
+        app:layout_constraintEnd_toStartOf="@+id/tvBeratAwalValPer"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/tvBeratAwalValPer"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Gram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <TextView
+        android:id="@+id/tvBeratAkhir"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berat Akhir :"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/ivResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeratAwal"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvBeratAkhirVal"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:text="982"
+        app:layout_constraintEnd_toStartOf="@+id/tvBeratAkhirValPer"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeratAwalVal" />
+
+    <TextView
+        android:id="@+id/tvBeratAkhirValPer"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
+        android:text="Gram"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeratAwalValPer" />
+
+    <TextView
+        android:id="@+id/tvKadarAir"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kadar Air :"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/ivResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeratAkhir"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvKadarAirVal"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:text="11"
+        app:layout_constraintEnd_toStartOf="@+id/tvKadarAirValPer"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeratAkhirVal" />
+
+    <TextView
+        android:id="@+id/tvKadarAirValPer"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
+        android:text="%"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeratAkhirVal" />
+
+
+    <TextView
+        android:id="@+id/tvSuccess2"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Status :"
+        app:layout_constraintStart_toEndOf="@+id/ivResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvKadarAir" />
+
+    <TextView
+        android:id="@+id/tvWarning"
+        style="@style/TextView.PoppinsNormal10spD9435E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:text="Kadar Air Terlalu Rendah"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKadarAirVal"
+        tools:visibility="visible"/>
+    <TextView
+        android:id="@+id/tvSuccess"
+        style="@style/TextView.PoppinsNormal10sp1ABC9C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:text="Success"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKadarAirVal"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        style="@style/Button.Secondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:textAllCaps="false"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
